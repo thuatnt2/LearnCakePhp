@@ -11,7 +11,7 @@ class User extends AppModel {
 
     /**
      * Validation rules
-     *
+     * No co chi
      * @var array
      */
     public $validate = array(
