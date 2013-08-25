@@ -9,6 +9,8 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
+    var $helpers = array('test');
+
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('add');

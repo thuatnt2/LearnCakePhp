@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Application level View Helper
  *
@@ -31,4 +32,10 @@ App::uses('Helper', 'View');
  * @package       app.View.Helper
  */
 class AppHelper extends Helper {
+
+    public function current_user() {
+//        User.find(CakeSession::read("Auth.User.id"));
+        return User . find(CakeSession::read("Auth.User.id"))->username;
+    }
+
 }

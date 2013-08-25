@@ -38,19 +38,19 @@ class User extends AppModel {
         )
     );
 
-//    public $hasMany = array(
-//        'Post' => array(
-//            'className' => 'Post',
-//            'foreignKey' => 'user_id',
-//            'dependent' => true,
-//            'conditions' => '',
-//            'fields' => '',
-//            'order' => '',
-//            'limit' => '',
-//            'offset' => '',
-//            'exclusive' => '',
-//            'finderQuery' => '',
-//            'counterQuery' => ''
-//        )
-//    );
+    public $hasMany = array(
+        'Post' => array(
+            'className' => 'Post',
+            'foreignKey' => 'user_id',
+            'dependent' => true,
+            'conditions' => '',
+            'fields' => '',
+            'order' => '',
+            'limit' => '',
+            'offset' => '',
+            'exclusive' => '',
+            'finderQuery' => '',
+            'counterQuery' => ''
+        )
+    );
 }
