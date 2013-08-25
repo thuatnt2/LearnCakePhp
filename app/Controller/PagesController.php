@@ -38,7 +38,7 @@ class PagesController extends AppController {
      * @var string
      */
     public function beforeFilter() {
-        $this->layout = 'error';
+        $this->layout = 'default';
     }
 
     public $name = 'Pages';

@@ -14,6 +14,7 @@ class User extends AppModel {
      * No co chi
      * @var array
      */
+    // user_name,password 
     public $validate = array(
         'user_name' => array(
             'minlength' => array(
