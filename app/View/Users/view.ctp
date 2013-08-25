@@ -8,12 +8,7 @@
 		</dd>
 		<dt><?php echo __('User Name'); ?></dt>
 		<dd>
-			<?php echo h($user['User']['user_name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Password'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['password']); ?>
+			<?php echo h($user['User']['username']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Email'); ?></dt>

@@ -1,0 +1,8 @@
+CREATE TABLE posts (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	user_id INT NOT NULL, 
+	title VARCHAR(50),
+	content TEXT,
+    created DATETIME DEFAULT NULL,
+    modified DATETIME DEFAULT NULL
+)

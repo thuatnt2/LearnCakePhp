@@ -9,11 +9,25 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
-    /**
-     * Helpers
-     *
-     * @var array
-     */
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('add');
+    }
+
+    public function login() {
+        if ($this->request->is('post')) {
+            if ($this->Auth->login()) {
+//                $this->Session->setFlash(__('Sign in successfuly'));
+                return $this->redirect($this->Auth->redirect());
+            }
+            $this->Session->setFlash(__('Invalid username or password, try again'));
+        }
+    }
+
+    public function logout() {
+        return $this->redirect($this->Auth->logout());
+    }
+
     public $helpers = array('Text');
 
     /**
@@ -50,7 +64,7 @@ class UsersController extends AppController {
     public function add() {
         if ($this->request->is('post')) {
             $this->User->create();
-     
+
             if ($this->User->save($this->request->data)) {
                 $this->Session->setFlash(__('The user has been saved'));
                 $this->redirect(array('action' => 'index'));
