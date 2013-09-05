@@ -1,0 +1,10 @@
+2013-09-05 09:19:59 Error: Fatal Error (64): Cannot redeclare UsersController::$helpers in [C:\Sites\LearnCakePhp\app\Controller\UsersController.php, line 33]
+2013-09-05 09:19:59 Error: [FatalErrorException] Cannot redeclare UsersController::$helpers
+Request URL: /users/login
+Stack Trace:
+#0 C:\Sites\LearnCakePhp\lib\Cake\Error\ErrorHandler.php(184): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\Sites\LearnC...', 33)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\Sites\LearnC...', 33, Array)
+#2 C:\Sites\LearnCakePhp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\Sites\LearnC...', 33, Array)
+#3 C:\Sites\LearnCakePhp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
